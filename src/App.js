@@ -74,6 +74,7 @@ const Calculator = () => {
         <CalcBtn value='=' className='equal-button' onClick={handleOperator} />
         <CalcBtn value='+' className='operator' onClick={handleOperator} />
       </div>
+      <div className='footer'>Calculator 9841 Edition</div>
     </div>
   )
 }

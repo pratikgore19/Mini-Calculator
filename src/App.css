@@ -8,7 +8,9 @@
 }
 
 .calc-container {
-  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: repeat(4, 1fr);
   max-height: 600px;
   max-width: 400px;
   height: 60vh;
@@ -19,9 +21,8 @@
 }
 
 .calc-screen {
-  position: relative;
+  grid-column: 1/-1;
   width: 95%;
-  height: 15%;
   margin: 3% auto;
   padding: 1%;
   background-color: #fff;
@@ -33,13 +34,18 @@
 
 .calc-pad {
   display: grid;
+  grid-column: 1/-1;
   grid-template: repeat(4, 1fr) / repeat(4, 1fr);
   gap:  1%;
-  justify-content: space-around;
-  align-content: flex-start;
-  height: 75%;
   width: 95%;
   margin: 1% auto;
+}
+
+.footer {
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 1%;
+  font: small-caps bold 16px/2 sans-serif;
 }
 
 button {
